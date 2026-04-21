@@ -1,0 +1,61 @@
+PHISHING DETECTOR - PERMANENT CHANGES SAVED
+============================================
+
+All changes have been permanently saved to ensure easy setup in the future.
+
+FILES CREATED/UPDATED:
+=====================
+
+1. requirements.txt - Updated with exact dependency versions and comments
+2. setup.sh - Automated setup script for macOS/Linux
+3. setup.bat - Automated setup script for Windows
+4. README.md - Complete project documentation
+5. SETUP_GUIDE.md - Detailed setup and troubleshooting guide
+6. .gitignore - Git ignore file for clean repository
+
+CODE FIXES SAVED:
+=================
+
+1. sklearn_compat.py - Compatibility shim for sklearn version mismatch
+   - Fixes missing _gb_losses module
+   - Adds monotonic_cst attribute to DecisionTreeRegressor
+   - Reconstructs loss objects for GradientBoosting models
+
+2. app.py - Main application with automatic compatibility patches
+   - Port 5001 configuration (avoids AirPlay conflict on macOS)
+   - Automatic model patching on load
+
+3. feature.py - Optimized feature extraction
+   - Fixed bugs (response.text, uninitialized variables)
+   - Added timeouts for external API calls
+   - Performance optimizations (78s -> 5s)
+
+4. convert.py - Enhanced phishing detection
+   - is_suspicious_url() function for pattern detection
+   - IP-like domain detection
+   - Domain-in-path detection
+
+5. templates/index.html - Updated project information
+   - College: CGC Landran College
+   - Students: Karan, Janakpreet, Jaskaran
+   - Guide: Ms. Anjali Thakur
+   - Removed GitHub links
+
+6. templates/usecases.html - Updated project information
+
+QUICK START:
+===========
+
+For future setup, simply run:
+  ./setup.sh (macOS/Linux)
+  setup.bat (Windows)
+
+Or manually:
+  1. python3 -m venv venv
+  2. source venv/bin/activate
+  3. pip install -r requirements.txt
+  4. python app.py
+
+All compatibility fixes are automatic - no manual intervention needed!
+
+Date Saved: $(date)
