@@ -3,7 +3,6 @@ services:
     name: phish-detector
     runtime: python
     plan: free
-    rootDir: Phishing-detector
     autoDeploy: true
-    buildCommand: pip install -r Phishing-detector/requirements.txt
-    startCommand: gunicorn --chdir Phishing-detector app:app
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
