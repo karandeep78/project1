@@ -7,6 +7,7 @@ from sklearn import metrics
 import warnings
 import pickle
 import joblib
+from pathlib import Path
 # Import compatibility shim before loading model
 try:
     import sklearn_compat
@@ -16,11 +17,14 @@ from convert import convertion
 warnings.filterwarnings('ignore')
 from feature import FeatureExtraction
 
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "newmodel.pkl"
+
 # Try loading with joblib first (better compatibility), fallback to pickle
 try:
-    gbc = joblib.load("newmodel.pkl")
+    gbc = joblib.load(MODEL_PATH)
 except:
-    file = open("newmodel.pkl","rb")
+    file = open(MODEL_PATH,"rb")
     gbc = pickle.load(file)
     file.close()
 
