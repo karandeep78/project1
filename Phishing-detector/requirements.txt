@@ -1,0 +1,26 @@
+# Core dependencies for Phishing Detector
+# All versions are pinned for compatibility with the trained model
+
+# Web framework
+Flask==3.0.3
+gunicorn==20.1.0
+
+# Data processing
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.2
+
+# Web scraping and parsing
+beautifulsoup4==4.12.3
+Requests==2.31.0
+urllib3==2.2.1
+
+# URL and domain analysis
+whois==0.9.27
+googlesearch-python==1.2.3
+
+# Date utilities
+python-dateutil==2.8.2
+
+# Note: The sklearn_compat.py file handles compatibility between
+# the model (trained with sklearn 1.3.1) and sklearn 1.5.2
